@@ -759,6 +759,13 @@
         "0_3",
         "0_4"
       ]
+    },
+    {
+      "name": "dataset",
+      "type": "categorical",
+      "choices": ["CIFAR10"],
+      "default": "CIFAR10",
+      "probabilities": null
     }
   ],
   "forbiddens": [],
