@@ -513,6 +513,13 @@
       ],
       "default": "max_pool_3x3",
       "probabilities": null
+    },
+    {
+      "name": "dataset",
+      "type": "categorical",
+      "choices": ["CIFAR10"],
+      "default": "CIFAR10",
+      "probabilities": null
     }
   ],
   "conditions": [
@@ -759,13 +766,6 @@
         "0_3",
         "0_4"
       ]
-    },
-    {
-      "name": "dataset",
-      "type": "categorical",
-      "choices": ["CIFAR10"],
-      "default": "CIFAR10",
-      "probabilities": null
     }
   ],
   "forbiddens": [],
