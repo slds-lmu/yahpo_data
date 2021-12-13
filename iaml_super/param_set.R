@@ -76,7 +76,7 @@ codomain = ps(
   mmce = p_dbl(lower = 0, upper = 1, tags = "minimize"),
   f1 = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   auc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
-  logloss = p_dbl(lower = 0, upper = 1, tags = "minimize"),
+  logloss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   ramtrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rampredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
