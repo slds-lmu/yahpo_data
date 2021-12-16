@@ -137,5 +137,12 @@ ps$add_dep("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_12", on = "
 ps$add_dep("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_13", on = "NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5", cond = CondAnyOf$new(c("0_4", "1_4", "2_4", "3_4")))
 ps$add_dep("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_9", on = "NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5", cond = CondAnyOf$new(c("0_1", "0_2", "0_3", "0_4")))
 
-saveRDS(ps, "param_set.rds")
+# saveRDS(ps, "param_set.rds")
 
+domain = ps
+
+codomain = ps(
+  val_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+
+)
