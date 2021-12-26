@@ -50,7 +50,7 @@ domain = ps(
   glmnet.s = p_dbl(lower = 1e-4, upper = 1000, depends = learner == "glmnet"),
 
   xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart"), depends = learner == "xgboost"),
-  xgboost.nrounds = p_dbl(lower = 3, upper = 2000, depends = learner == "xgboost"),
+  xgboost.nrounds = p_int(lower = 3, upper = 2000, depends = learner == "xgboost"),
   xgboost.eta = p_dbl(lower = 1e-4, upper = 1, depends = xgboost.booster %in% c("dart", "gbtree") && learner == "xgboost"),
   xgboost.gamma = p_dbl(lower = 1e-4, upper = 7, depends = xgboost.booster %in% c("dart", "gbtree") && learner == "xgboost"),
   xgboost.lambda = p_dbl(lower = 1e-4, upper = 1000, depends = learner == "xgboost"),

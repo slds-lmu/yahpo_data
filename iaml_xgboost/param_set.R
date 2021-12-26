@@ -18,7 +18,7 @@ search_space = ps(
 
 domain = ps(
   booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
-  nrounds = p_dbl(lower = 3, upper = 2000),
+  nrounds = p_int(lower = 3, upper = 2000),
   eta = p_dbl(lower = 1e-4, upper = 1, depends = booster %in% c("dart", "gbtree")),
   gamma = p_dbl(lower = 1e-4, upper = 7, depends = booster %in% c("dart", "gbtree")),
   lambda = p_dbl(lower = 1e-4, upper = 1000),
