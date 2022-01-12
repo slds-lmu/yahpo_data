@@ -141,6 +141,6 @@ search_space = ps$clone(deep = TRUE)
 domain = ps$clone(deep = TRUE)
 
 codomain = ps(
-  val_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  val_accuracy = p_dbl(lower = 0, upper = 100, tags = "maximize"),
   runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize")
 )
