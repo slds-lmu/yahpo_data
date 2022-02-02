@@ -1,0 +1,107 @@
+[
+    {
+        "scenario": "nb301",
+        "instance": "CIFAR10",
+        "target": ["accuracy", "time"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "168868",
+        "target": ["test_balanced_accuracy", "test_cross_entropy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167152",
+        "target": ["test_balanced_accuracy", "test_cross_entropy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167200",
+        "target": ["test_balanced_accuracy", "test_cross_entropy"]
+    },    
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "41156",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "40701",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "iaml_glmnet",
+        "instance": "40981",
+        "target": ["mmce", "logloss", "nf", "ias"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "41156",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "40701",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "iaml_rpart",
+        "instance": "40981",
+        "target": ["mmce", "logloss", "nf", "ias"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "41156",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "40701",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "iaml_ranger",
+        "instance": "40981",
+        "target": ["mmce", "logloss", "nf", "ias"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "41156",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "40701",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "iaml_xgboost",
+        "instance": "40981",
+        "target": ["mmce", "logloss", "nf", "ias"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "41156",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "40701",
+        "target": ["mmce", "logloss"]
+    },
+    {
+        "scenario": "iaml_super",
+        "instance": "40981",
+        "target": ["mmce", "logloss", "nf", "ias"]
+    },
+    {
+        "scenario": "fcnet",
+        "instance": "fcnet_protein_structure",
+        "target": ["valid_mse", "n_params"]
+    },
+    {
+        "scenario": "fcnet_naval_propulsion",
+        "instance": "23381",
+        "target": ["valid_mse", "n_params"]
+    }
+]

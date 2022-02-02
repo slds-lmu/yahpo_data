@@ -1,0 +1,107 @@
+[
+    {
+        "scenario": "nb301",
+        "instance": "CIFAR10",
+        "target": ["val_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "168868",
+        "target": ["test_balanced_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167152",
+        "target": ["test_balanced_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167200",
+        "target": ["test_balanced_accuracy"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "41156",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "40701",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "23381",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "41156",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "40701",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "23381",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "41156",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "40701",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "23381",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "41156",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "40701",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "23381",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "41156",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "40701",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "23381",
+        "target": ["mmce"]
+    },
+    {
+        "scenario": "fcnet",
+        "instance": "fcnet_protein_structure",
+        "target": ["valid_mse"]
+    },
+    {
+        "scenario": "fcnet_naval_propulsion",
+        "instance": "23381",
+        "target": ["valid_mse"]
+    }
+]
