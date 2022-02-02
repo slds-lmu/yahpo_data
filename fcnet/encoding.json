@@ -1,0 +1,1 @@
+{"activation_fn_1": {"#na#": 0, "relu": 1, "tanh": 2}, "activation_fn_2": {"#na#": 0, "relu": 1, "tanh": 2}, "lr_schedule": {"#na#": 0, "const": 1, "cosine": 2}, "task": {"#na#": 0, "fcnet_naval_propulsion": 1, "fcnet_parkinsons_telemonitoring": 2, "fcnet_protein_structure": 3, "fcnet_slice_localization": 4}}
