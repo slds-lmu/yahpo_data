@@ -105,7 +105,7 @@
       "lower": 16,
       "upper": 512,
       "default": 256
-    },
+    }
   ],
   "conditions": [],
   "forbiddens": [],
