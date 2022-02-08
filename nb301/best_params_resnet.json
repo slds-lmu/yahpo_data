@@ -1,0 +1,1 @@
+{"d": 512, "d_hidden_factor": 1.548201511416969, "hidden_dropout": 0.37412629237004996, "lr": 0.007735302602100844, "mixup": false, "n_layers": 7, "use_residual_dropout": false}
