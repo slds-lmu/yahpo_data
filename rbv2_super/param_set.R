@@ -42,7 +42,7 @@ search_space = ps(
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     # learner
-    trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+    trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
     repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
     learner = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
@@ -110,7 +110,7 @@ domain = ps(
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     # learner
-    trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+    trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
     repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
     learner = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
