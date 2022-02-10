@@ -77,11 +77,11 @@
     },
     {
       "name": "max_units",
-      "type": "uniform_float",
+      "type": "uniform_int",
       "log": true,
-      "lower": 63.99999999999998,
-      "upper": 1024.0,
-      "default": 256.0
+      "lower": 64,
+      "upper": 1024,
+      "default": 256
     },
     {
       "name": "momentum",
