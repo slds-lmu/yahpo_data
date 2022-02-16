@@ -1,4 +1,4 @@
-domain = ps(
+search_space = ps(
   task = p_fct(levels = c("fcnet_naval_propulsion", "fcnet_protein_structure", "fcnet_slice_localization","fcnet_parkinsons_telemonitoring"), tags = "task_id"),
   activation_fn_1 = p_fct(levels = c("relu", "tanh")),
   activation_fn_2 = p_fct(levels = c("relu", "tanh")),
@@ -12,7 +12,9 @@ domain = ps(
   n_units_1 = p_int(lower = 16L, upper= 512L),
   n_units_2 = p_int(lower = 16L, upper= 512L)
 )
-
+                     
+domain = search_space$clone()
+                     
 codomain = ps(
   valid_loss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   valid_mse = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
