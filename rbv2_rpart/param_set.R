@@ -1,11 +1,15 @@
 codomain = ps(
-  mmce = p_dbl(lower = 0, upper = 1, tags = "minimize"),
+  acc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  bac = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   f1 = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   auc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  brier = p_dbl(lower = 0, upper = 1, tags = "minimize"),
   logloss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   timetrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
+  memory = p_dbl(lower = 0, upper = Inf, tags = "minimize")
 )
+
 
 search_space = ps(
   cp = p_dbl(lower = -7, upper = 0, tags = "log", trafo = function(x) exp(x)),
