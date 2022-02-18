@@ -84,7 +84,7 @@ domain = ps(
     # ranger
     ranger.num.trees = p_int(lower = 1L, upper = 2000L),
     ranger.sample.fraction = p_dbl(lower = 0.1, upper = 1),
-    ranger.mtry.power = p_int(lower = 0, upper = 1),
+    ranger.mtry.power = p_dbl(lower = 0, upper = 1),
     ranger.respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
     ranger.min.node.size = p_int(lower = 1L, upper = 100L),
     ranger.splitrule = p_fct(levels = c("gini", "extratrees")),
