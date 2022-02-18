@@ -1,2 +1,2 @@
 # yahpo_data
-data required for pfistfl/yahpo_gym
+data required for slds-lmu/yahpo_gym
