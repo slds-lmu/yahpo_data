@@ -183,7 +183,7 @@
       "name": "trainsize",
       "type": "uniform_float",
       "log": false,
-      "lower": 0.05,
+      "lower": 0.03,
       "upper": 1.0,
       "default": 0.525
     },

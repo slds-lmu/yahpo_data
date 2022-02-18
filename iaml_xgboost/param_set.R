@@ -12,7 +12,7 @@ search_space = ps(
   colsample_bylevel = p_dbl(lower = 0.01, upper = 1, depends = booster %in% c("dart", "gbtree")),
   rate_drop = p_dbl(lower = 0, upper = 1, depends = booster == "dart"),
   skip_drop = p_dbl(lower = 0, upper = 1, depends = booster == "dart"),
-  trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+  trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
   task_id = p_fct(levels = c("40981", "41146", "1489", "1067"), tags = "task_id")
 )
 
@@ -30,7 +30,7 @@ domain = ps(
   colsample_bylevel = p_dbl(lower = 0.01, upper = 1, depends = booster %in% c("dart", "gbtree")),
   rate_drop = p_dbl(lower = 0, upper = 1, depends = booster == "dart"),
   skip_drop = p_dbl(lower = 0, upper = 1, depends = booster == "dart"),
-  trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+  trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
   task_id = p_fct(levels = c("40981", "41146", "1489", "1067"), tags = "task_id")
 )
 

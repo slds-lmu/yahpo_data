@@ -14,7 +14,7 @@ codomain = ps(
 search_space = ps(
   alpha = p_dbl(lower = 0, upper = 1),
   s = p_dbl(lower = -7, upper = 7, tags = "log", trafo = function(x) exp(x)),
-  trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+  trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
   repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
   num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
   task_id = p_fct(levels = c("1040", "1049", "1050", "1053", "1056", "1063", "1067", "1068",
@@ -36,7 +36,7 @@ search_space = ps(
 domain = ps(
   alpha = p_dbl(lower = 0, upper = 1),
   s = p_dbl(lower = exp(-7), upper = exp(7)),
-  trainsize = p_dbl(lower = 0.05, upper = 1, tags = "budget"),
+  trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
   repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
   num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
   task_id = p_fct(levels = c("1040", "1049", "1050", "1053", "1056", "1063", "1067", "1068",
