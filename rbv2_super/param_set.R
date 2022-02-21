@@ -41,29 +41,31 @@ search_space = ps(
     xgboost.colsample_bylevel = p_dbl(lower = 0.01, upper = 1, depends = xgboost.booster %in% c("dart", "gbtree")),
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
-    # learner
+    # learner_id
     trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
     repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
-    learner = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
-    task_id = p_fct(levels = c("1040", "1049", "1050", "1053", "1056", "1063", "1067", "1068",
-      "11", "1111", "12", "14", "1461", "1462", "1464", "1468", "1475",
-      "1476", "1478", "1479", "1480", "1485", "1486", "1487", "1489",
-      "1494", "1497", "15", "1501", "1510", "1515", "16", "18", "181",
-      "182", "188", "22", "23", "23381", "24", "28", "29", "3", "307",
-      "31", "312", "32", "334", "37", "375", "377", "38", "40496",
-      "40498", "40499", "40536", "40670", "40701", "40900", "40966",
-      "40975", "40978", "40979", "40981", "40982", "40983", "40984",
-      "40994", "41138", "41142", "41143", "41146", "41156", "41157",
-      "41212", "4134", "4154", "42", "44", "4534", "4538", "458", "46",
-      "469", "470", "50", "54", "60", "6332"),
+    learner_id_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
+    task_id = p_fct(levels = c("41138", "40981", "4134", "1220", "4154", "41163", "4538",
+    "40978", "375", "1111", "40496", "40966", "4534", "40900", "40536",
+    "41156", "1590", "1457", "458", "469", "41157", "11", "1461",
+    "1462", "1464", "15", "40975", "41142", "40701", "40994", "23",
+    "1468", "40668", "29", "31", "6332", "37", "40670", "23381",
+    "151", "188", "41164", "1475", "1476", "1478", "41169", "1479",
+    "41212", "1480", "300", "41143", "1053", "41027", "1067", "1063",
+    "41162", "3", "6", "1485", "1056", "12", "14", "16", "18", "40979",
+    "22", "1515", "334", "24", "1486", "1493", "28", "1487", "1068",
+    "1050", "1049", "32", "1489", "470", "1494", "182", "312", "40984",
+    "1501", "40685", "38", "42", "44", "46", "40982", "1040", "41146",
+    "377", "40499", "50", "54", "307", "1497", "60", "1510", "40983",
+    "40498", "181"),
       tags = "task_id"
     )
 )
 # Add dependencies
-map(search_space$params$learner$levels, function(x) {
+map(search_space$params$learner_id$levels, function(x) {
     nms = names(search_space$params)[startsWith(names(search_space$params), x)]
-    map(nms, function(nm) search_space$add_dep(nm, "learner", CondEqual$new(x)))
+    map(nms, function(nm) search_space$add_dep(nm, "learner_id", CondEqual$new(x)))
 })
 
 domain = ps(
@@ -109,29 +111,31 @@ domain = ps(
     xgboost.colsample_bylevel = p_dbl(lower = 0.01, upper = 1, depends = xgboost.booster %in% c("dart", "gbtree")),
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
-    # learner
+    # learner_id
     trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
     repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
-    learner = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
-    task_id = p_fct(levels = c("1040", "1049", "1050", "1053", "1056", "1063", "1067", "1068",
-      "11", "1111", "12", "14", "1461", "1462", "1464", "1468", "1475",
-      "1476", "1478", "1479", "1480", "1485", "1486", "1487", "1489",
-      "1494", "1497", "15", "1501", "1510", "1515", "16", "18", "181",
-      "182", "188", "22", "23", "23381", "24", "28", "29", "3", "307",
-      "31", "312", "32", "334", "37", "375", "377", "38", "40496",
-      "40498", "40499", "40536", "40670", "40701", "40900", "40966",
-      "40975", "40978", "40979", "40981", "40982", "40983", "40984",
-      "40994", "41138", "41142", "41143", "41146", "41156", "41157",
-      "41212", "4134", "4154", "42", "44", "4534", "4538", "458", "46",
-      "469", "470", "50", "54", "60", "6332"),
+    learner_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
+    task_id = p_fct(levels = c("41138", "40981", "4134", "1220", "4154", "41163", "4538",
+    "40978", "375", "1111", "40496", "40966", "4534", "40900", "40536",
+    "41156", "1590", "1457", "458", "469", "41157", "11", "1461",
+    "1462", "1464", "15", "40975", "41142", "40701", "40994", "23",
+    "1468", "40668", "29", "31", "6332", "37", "40670", "23381",
+    "151", "188", "41164", "1475", "1476", "1478", "41169", "1479",
+    "41212", "1480", "300", "41143", "1053", "41027", "1067", "1063",
+    "41162", "3", "6", "1485", "1056", "12", "14", "16", "18", "40979",
+    "22", "1515", "334", "24", "1486", "1493", "28", "1487", "1068",
+    "1050", "1049", "32", "1489", "470", "1494", "182", "312", "40984",
+    "1501", "40685", "38", "42", "44", "46", "40982", "1040", "41146",
+    "377", "40499", "50", "54", "307", "1497", "60", "1510", "40983",
+    "40498", "181"),
       tags = "task_id"
     )
 )
 # Add dependencies
-map(domain$params$learner$levels, function(x) {
+map(domain$params$learner_id$levels, function(x) {
     nms = names(domain$params)[startsWith(names(domain$params), x)]
-    map(nms, function(nm) domain$add_dep(nm, "learner", CondEqual$new(x)))
+    map(nms, function(nm) domain$add_dep(nm, "learner_id", CondEqual$new(x)))
 })
 
 codomain = ps(
