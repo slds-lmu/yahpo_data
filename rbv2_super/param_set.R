@@ -41,11 +41,10 @@ search_space = ps(
     xgboost.colsample_bylevel = p_dbl(lower = 0.01, upper = 1, depends = xgboost.booster %in% c("dart", "gbtree")),
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
-    # learner_id
     trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
     repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
-    learner_id_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
+    learner_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
     task_id = p_fct(levels = c("41138", "40981", "4134", "1220", "4154", "41163", "4538",
     "40978", "375", "1111", "40496", "40966", "4534", "40900", "40536",
     "41156", "1590", "1457", "458", "469", "41157", "11", "1461",
