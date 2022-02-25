@@ -6,102 +6,97 @@
     },
     {
         "scenario": "lcbench",
-        "instance": "168868",
-        "target": ["test_balanced_accuracy"]
+        "instance": "167168",
+        "target": ["val_accuracy"]
     },
     {
         "scenario": "lcbench",
-        "instance": "167152",
-        "target": ["test_balanced_accuracy"]
+        "instance": "189873",
+        "target": ["val_accuracy"]
     },
     {
         "scenario": "lcbench",
-        "instance": "167200",
-        "target": ["test_balanced_accuracy"]
-    },
-    {
-        "scenario": "rbv2_glmnet",
-        "instance": "41156",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_glmnet",
-        "instance": "40701",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_glmnet",
-        "instance": "23381",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_rpart",
-        "instance": "41156",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_rpart",
-        "instance": "40701",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_rpart",
-        "instance": "23381",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_ranger",
-        "instance": "41156",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_ranger",
-        "instance": "40701",
-        "target": ["mmce"]
-    },
-    {
-        "scenario": "rbv2_ranger",
-        "instance": "23381",
-        "target": ["mmce"]
+        "instance": "189906",
+        "target": ["val_accuracy"]
     },
     {
         "scenario": "rbv2_xgboost",
-        "instance": "41156",
-        "target": ["mmce"]
+        "instance": "12",
+        "target": ["acc"]
     },
     {
         "scenario": "rbv2_xgboost",
-        "instance": "40701",
-        "target": ["mmce"]
+        "instance": "1501",
+        "target": ["acc"]
     },
     {
         "scenario": "rbv2_xgboost",
-        "instance": "23381",
-        "target": ["mmce"]
+        "instance": "16",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "40499",
+        "target": ["acc"]
     },
     {
         "scenario": "rbv2_super",
-        "instance": "41156",
-        "target": ["mmce"]
+        "instance": "1053",
+        "target": ["acc"]
     },
     {
         "scenario": "rbv2_super",
-        "instance": "40701",
-        "target": ["mmce"]
+        "instance": "1457",
+        "target": ["acc"]
     },
     {
         "scenario": "rbv2_super",
-        "instance": "23381",
-        "target": ["mmce"]
+        "instance": "1063",
+        "target": ["acc"]
     },
     {
-        "scenario": "fcnet",
-        "instance": "fcnet_protein_structure",
-        "target": ["valid_mse"]
+        "scenario": "rbv2_super",
+        "instance": "1479",
+        "target": ["acc"]
     },
     {
-        "scenario": "fcnet_naval_propulsion",
-        "instance": "23381",
-        "target": ["valid_mse"]
+        "scenario": "rbv2_super",
+        "instance": "15",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1468",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "375",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "458",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "16",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "42",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "14",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "40499",
+        "target": ["acc"]
     }
 ]
