@@ -1,0 +1,44 @@
+{
+  "hyperparameters": [
+    {
+      "name": "alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "s",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 999.9999999999998,
+      "default": 0.316227766
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "40981",
+        "41146",
+        "1489",
+        "1067"
+      ],
+      "default": "40981",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.4.19",
+  "json_format_version": 0.2
+}

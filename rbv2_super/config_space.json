@@ -1,0 +1,727 @@
+{
+  "hyperparameters": [
+    {
+      "name": "learner_id",
+      "type": "categorical",
+      "choices": [
+        "aknn",
+        "glmnet",
+        "ranger",
+        "rpart",
+        "svm",
+        "xgboost"
+      ],
+      "default": "aknn",
+      "probabilities": null
+    },
+    {
+      "name": "num.impute.selected.cpo",
+      "type": "categorical",
+      "choices": [
+        "impute.mean",
+        "impute.median",
+        "impute.hist"
+      ],
+      "default": "impute.mean",
+      "probabilities": null
+    },
+    {
+      "name": "repl",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 10,
+      "default": 6
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "41138","40981","4134","1220","4154","41163","4538","40978","375","1111","40496","40966","4534","40900","40536","41156","1590","1457","458","469","41157","11","1461","1462","1464","15","40975","41142","40701","40994","23","1468","40668","29","31","6332","37","40670","23381","151","188","41164","1475","1476","1478","41169","1479","41212","1480","300","41143","1053","41027","1067","1063","41162","3","6","1485","1056","12","14","16","18","40979","22","1515","334","24","1486","1493","28","1487","1068","1050","1049","32","1489","470","1494","182","312","40984","1501","40685","38","42","44","46","40982","1040","41146","377","40499","50","54","307","1497","60","1510","40983","40498","181"
+      ],
+      "default": "1040",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    },
+    {
+      "name": "aknn.M",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 18,
+      "upper": 50,
+      "default": 34
+    },
+    {
+      "name": "aknn.distance",
+      "type": "categorical",
+      "choices": [
+        "l2",
+        "cosine",
+        "ip"
+      ],
+      "default": "l2",
+      "probabilities": null
+    },
+    {
+      "name": "aknn.ef",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 7,
+      "upper": 403,
+      "default": 53
+    },
+    {
+      "name": "aknn.ef_construction",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 7,
+      "upper": 1097,
+      "default": 88
+    },
+    {
+      "name": "aknn.k",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 50,
+      "default": 26
+    },
+    {
+      "name": "glmnet.alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 1.0
+    },
+    {
+      "name": "glmnet.s",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0009118819655545162,
+      "upper": 1096.6331584284585,
+      "default": 1.0
+    },
+    {
+      "name": "ranger.min.node.size",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "ranger.mtry.power",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 0,
+      "upper": 1,
+      "default": 0
+    },
+    {
+      "name": "ranger.num.trees",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 2000,
+      "default": 1000
+    },
+    {
+      "name": "ranger.respect.unordered.factors",
+      "type": "categorical",
+      "choices": [
+        "ignore",
+        "order",
+        "partition"
+      ],
+      "default": "ignore",
+      "probabilities": null
+    },
+    {
+      "name": "ranger.sample.fraction",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "ranger.splitrule",
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "extratrees"
+      ],
+      "default": "gini",
+      "probabilities": null
+    },
+    {
+      "name": "rpart.cp",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0009118819655545162,
+      "upper": 1.0,
+      "default": 0.01
+    },
+    {
+      "name": "rpart.maxdepth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 30,
+      "default": 30
+    },
+    {
+      "name": "rpart.minbucket",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 1
+    },
+    {
+      "name": "rpart.minsplit",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 20
+    },
+    {
+      "name": "svm.cost",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 22026.465794806718,
+      "default": 1.0
+    },
+    {
+      "name": "svm.kernel",
+      "type": "categorical",
+      "choices": [
+        "linear",
+        "polynomial",
+        "radial"
+      ],
+      "default": "linear",
+      "probabilities": null
+    },
+    {
+      "name": "svm.tolerance",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 2.0,
+      "default": 0.009528896
+    },
+    {
+      "name": "xgboost.alpha",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0009118819655545162,
+      "upper": 1096.6331584284585,
+      "default": 1.0
+    },
+    {
+      "name": "xgboost.booster",
+      "type": "categorical",
+      "choices": [
+        "gblinear",
+        "gbtree",
+        "dart"
+      ],
+      "default": "gblinear",
+      "probabilities": null
+    },
+    {
+      "name": "xgboost.lambda",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0009118819655545162,
+      "upper": 1096.6331584284585,
+      "default": 1.0
+    },
+    {
+      "name": "xgboost.nrounds",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 7,
+      "upper": 2981,
+      "default": 144
+    },
+    {
+      "name": "xgboost.subsample",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "ranger.num.random.splits",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 1
+    },
+    {
+      "name": "svm.degree",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 2,
+      "upper": 5,
+      "default": 4
+    },
+    {
+      "name": "svm.gamma",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 22026.465794806718,
+      "default": 1.0
+    },
+    {
+      "name": "xgboost.colsample_bylevel",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "xgboost.colsample_bytree",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "xgboost.eta",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0009118819655545162,
+      "upper": 1.0,
+      "default": 0.0301973834
+    },
+    {
+      "name": "xgboost.gamma",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 7.38905609893065,
+      "default": 0.0183156389
+    },
+    {
+      "name": "xgboost.max_depth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 15,
+      "default": 8
+    },
+    {
+      "name": "xgboost.min_child_weight",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 2.718281828459045,
+      "upper": 148.4131591025766,
+      "default": 20.0855369232
+    },
+    {
+      "name": "xgboost.rate_drop",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "xgboost.skip_drop",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    }
+  ],
+  "conditions": [
+    {
+      "child": "aknn.M",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "aknn"
+    },
+    {
+      "child": "aknn.distance",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "aknn"
+    },
+    {
+      "child": "aknn.ef",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "aknn"
+    },
+    {
+      "child": "aknn.ef_construction",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "aknn"
+    },
+    {
+      "child": "aknn.k",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "aknn"
+    },
+    {
+      "child": "glmnet.alpha",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "glmnet"
+    },
+    {
+      "child": "glmnet.s",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "glmnet"
+    },
+    {
+      "child": "ranger.min.node.size",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.mtry.power",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.num.trees",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.respect.unordered.factors",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.sample.fraction",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.splitrule",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "rpart.cp",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.maxdepth",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.minbucket",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.minsplit",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "svm.cost",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "svm"
+    },
+    {
+      "child": "svm.kernel",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "svm"
+    },
+    {
+      "child": "svm.tolerance",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "svm"
+    },
+    {
+      "child": "xgboost.alpha",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.booster",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.lambda",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.nrounds",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.subsample",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "ranger.num.random.splits",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "ranger.num.random.splits",
+          "parent": "ranger.splitrule",
+          "type": "EQ",
+          "value": "extratrees"
+        },
+        {
+          "child": "ranger.num.random.splits",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "ranger"
+        }
+      ]
+    },
+    {
+      "child": "svm.degree",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "svm.degree",
+          "parent": "svm.kernel",
+          "type": "EQ",
+          "value": "polynomial"
+        },
+        {
+          "child": "svm.degree",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "svm"
+        }
+      ]
+    },
+    {
+      "child": "svm.gamma",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "svm.gamma",
+          "parent": "svm.kernel",
+          "type": "EQ",
+          "value": "radial"
+        },
+        {
+          "child": "svm.gamma",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "svm"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.colsample_bylevel",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.colsample_bylevel",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.colsample_bylevel",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.colsample_bytree",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.colsample_bytree",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.colsample_bytree",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.eta",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.eta",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.eta",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.gamma",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.gamma",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.gamma",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.max_depth",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.max_depth",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.max_depth",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.min_child_weight",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.min_child_weight",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.min_child_weight",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.rate_drop",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.rate_drop",
+          "parent": "xgboost.booster",
+          "type": "EQ",
+          "value": "dart"
+        },
+        {
+          "child": "xgboost.rate_drop",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.skip_drop",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.skip_drop",
+          "parent": "xgboost.booster",
+          "type": "EQ",
+          "value": "dart"
+        },
+        {
+          "child": "xgboost.skip_drop",
+          "parent": "learner_id",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.18",
+  "json_format_version": 0.2
+}

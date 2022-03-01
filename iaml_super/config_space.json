@@ -1,0 +1,555 @@
+{
+  "hyperparameters": [
+    {
+      "name": "learner",
+      "type": "categorical",
+      "choices": [
+        "ranger",
+        "glmnet",
+        "xgboost",
+        "rpart"
+      ],
+      "default": "ranger",
+      "probabilities": null
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "40981",
+        "41146",
+        "1489",
+        "1067"
+      ],
+      "default": "40981",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    },
+    {
+      "name": "glmnet.alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "glmnet.s",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 999.9999999999998,
+      "default": 0.316227766
+    },
+    {
+      "name": "ranger.min.node.size",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "ranger.mtry.ratio",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "ranger.num.trees",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 2000,
+      "default": 1000
+    },
+    {
+      "name": "ranger.replace",
+      "type": "categorical",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "default": "TRUE",
+      "probabilities": null
+    },
+    {
+      "name": "ranger.respect.unordered.factors",
+      "type": "categorical",
+      "choices": [
+        "ignore",
+        "order",
+        "partition"
+      ],
+      "default": "ignore",
+      "probabilities": null
+    },
+    {
+      "name": "ranger.sample.fraction",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "ranger.splitrule",
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "extratrees"
+      ],
+      "default": "gini",
+      "probabilities": null
+    },
+    {
+      "name": "rpart.cp",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 1.0,
+      "default": 0.01
+    },
+    {
+      "name": "rpart.maxdepth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 30,
+      "default": 16
+    },
+    {
+      "name": "rpart.minbucket",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "rpart.minsplit",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "xgboost.alpha",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 999.9999999999998,
+      "default": 0.316227766
+    },
+    {
+      "name": "xgboost.booster",
+      "type": "categorical",
+      "choices": [
+        "gblinear",
+        "gbtree",
+        "dart"
+      ],
+      "default": "gblinear",
+      "probabilities": null
+    },
+    {
+      "name": "xgboost.lambda",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 999.9999999999998,
+      "default": 0.316227766
+    },
+    {
+      "name": "xgboost.nrounds",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 3,
+      "upper": 2000,
+      "default": 77
+    },
+    {
+      "name": "xgboost.subsample",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "ranger.num.random.splits",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "xgboost.colsample_bylevel",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "xgboost.colsample_bytree",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "xgboost.eta",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 1.0,
+      "default": 0.01
+    },
+    {
+      "name": "xgboost.gamma",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 6.999999999999999,
+      "default": 0.0264575131
+    },
+    {
+      "name": "xgboost.max_depth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 15,
+      "default": 8
+    },
+    {
+      "name": "xgboost.min_child_weight",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 2.718281828459045,
+      "upper": 149.99999999999997,
+      "default": 20.1926292064
+    },
+    {
+      "name": "xgboost.rate_drop",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "xgboost.skip_drop",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    }
+  ],
+  "conditions": [
+    {
+      "child": "glmnet.alpha",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "glmnet"
+    },
+    {
+      "child": "glmnet.s",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "glmnet"
+    },
+    {
+      "child": "ranger.min.node.size",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.mtry.ratio",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.num.trees",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.replace",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.respect.unordered.factors",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.sample.fraction",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "ranger.splitrule",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
+      "child": "rpart.cp",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.maxdepth",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.minbucket",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "rpart.minsplit",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "rpart"
+    },
+    {
+      "child": "xgboost.alpha",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.booster",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.lambda",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.nrounds",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "xgboost.subsample",
+      "parent": "learner",
+      "type": "EQ",
+      "value": "xgboost"
+    },
+    {
+      "child": "ranger.num.random.splits",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "ranger.num.random.splits",
+          "parent": "ranger.splitrule",
+          "type": "EQ",
+          "value": "extratrees"
+        },
+        {
+          "child": "ranger.num.random.splits",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "ranger"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.colsample_bylevel",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.colsample_bylevel",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.colsample_bylevel",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.colsample_bytree",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.colsample_bytree",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.colsample_bytree",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.eta",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.eta",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.eta",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.gamma",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.gamma",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.gamma",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.max_depth",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.max_depth",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.max_depth",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.min_child_weight",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.min_child_weight",
+          "parent": "xgboost.booster",
+          "type": "IN",
+          "values": [
+            "dart",
+            "gbtree"
+          ]
+        },
+        {
+          "child": "xgboost.min_child_weight",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.rate_drop",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.rate_drop",
+          "parent": "xgboost.booster",
+          "type": "EQ",
+          "value": "dart"
+        },
+        {
+          "child": "xgboost.rate_drop",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    },
+    {
+      "child": "xgboost.skip_drop",
+      "type": "AND",
+      "conditions": [
+        {
+          "child": "xgboost.skip_drop",
+          "parent": "xgboost.booster",
+          "type": "EQ",
+          "value": "dart"
+        },
+        {
+          "child": "xgboost.skip_drop",
+          "parent": "learner",
+          "type": "EQ",
+          "value": "xgboost"
+        }
+      ]
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.19",
+  "json_format_version": 0.2
+}

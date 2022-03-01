@@ -1,0 +1,60 @@
+{
+  "hyperparameters": [
+    {
+      "name": "cp",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 1.0,
+      "default": 0.01
+    },
+    {
+      "name": "maxdepth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 30,
+      "default": 16
+    },
+    {
+      "name": "minbucket",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "minsplit",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "40981",
+        "41146",
+        "1489",
+        "1067"
+      ],
+      "default": "40981",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.4.19",
+  "json_format_version": 0.2
+}

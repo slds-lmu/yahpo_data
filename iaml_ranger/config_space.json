@@ -1,0 +1,106 @@
+{
+  "hyperparameters": [
+    {
+      "name": "min.node.size",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "mtry.ratio",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "num.trees",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 2000,
+      "default": 1000
+    },
+    {
+      "name": "replace",
+      "type": "categorical",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "default": "TRUE",
+      "probabilities": null
+    },
+    {
+      "name": "respect.unordered.factors",
+      "type": "categorical",
+      "choices": [
+        "ignore",
+        "order",
+        "partition"
+      ],
+      "default": "ignore",
+      "probabilities": null
+    },
+    {
+      "name": "sample.fraction",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "splitrule",
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "extratrees"
+      ],
+      "default": "gini",
+      "probabilities": null
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "40981",
+        "41146",
+        "1489",
+        "1067"
+      ],
+      "default": "40981",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    },
+    {
+      "name": "num.random.splits",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    }
+  ],
+  "conditions": [
+    {
+      "child": "num.random.splits",
+      "parent": "splitrule",
+      "type": "EQ",
+      "value": "extratrees"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.19",
+  "json_format_version": 0.2
+}

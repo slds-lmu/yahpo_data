@@ -1,0 +1,127 @@
+[
+    {
+        "scenario": "lcbench",
+        "instance": "167152",
+        "target": ["val_accuracy", "val_cross_entropy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167185",
+        "target": ["val_accuracy", "val_cross_entropy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "189873",
+        "target": ["val_accuracy", "val_cross_entropy"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "28",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "182",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "12",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1457",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "6",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1053",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "41163",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "1476",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "40499",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "6",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "40979",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "375",
+        "target": ["acc", "memory"]
+    },
+    {
+        "scenario": "iaml_xgboost",
+        "instance": "40981",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_xgboost",
+        "instance": "1489",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_ranger",
+        "instance": "1489",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_ranger",
+        "instance": "1067",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_glmnet",
+        "instance": "1489",
+        "target": ["mmce", "nf"]
+    },
+    {
+        "scenario": "iaml_glmnet",
+        "instance": "1067",
+        "target": ["mmce", "nf"]
+    },
+    {
+        "scenario": "iaml_super",
+        "instance": "1489",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_super",
+        "instance": "1067",
+        "target": ["mmce", "nf", "ias"]
+    },
+    {
+        "scenario": "iaml_xgboost",
+        "instance": "40981",
+        "target": ["mmce", "nf", "ias", "rammodel"]
+    },
+    {
+        "scenario": "iaml_xgboost",
+        "instance": "1489",
+        "target": ["mmce", "nf", "ias", "rammodel"]
+    }
+]

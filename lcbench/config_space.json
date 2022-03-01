@@ -1,0 +1,114 @@
+{
+  "hyperparameters": [
+    {
+      "name": "OpenML_task_id",
+      "type": "categorical",
+      "choices": [
+        "3945",
+        "7593",
+        "34539",
+        "126025",
+        "126026",
+        "126029",
+        "146212",
+        "167104",
+        "167149",
+        "167152",
+        "167161",
+        "167168",
+        "167181",
+        "167184",
+        "167185",
+        "167190",
+        "167200",
+        "167201",
+        "168329",
+        "168330",
+        "168331",
+        "168335",
+        "168868",
+        "168908",
+        "168910",
+        "189354",
+        "189862",
+        "189865",
+        "189866",
+        "189873",
+        "189905",
+        "189906",
+        "189908",
+        "189909"
+      ],
+      "default": "3945",
+      "probabilities": null
+    },
+    {
+      "name": "batch_size",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 16,
+      "upper": 512,
+      "default": 91
+    },
+    {
+      "name": "epoch",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 52,
+      "default": 26
+    },
+    {
+      "name": "learning_rate",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.00010000000000000009,
+      "upper": 0.10000000000000002,
+      "default": 0.0031622777
+    },
+    {
+      "name": "max_dropout",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "max_units",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 64,
+      "upper": 1024,
+      "default": 256
+    },
+    {
+      "name": "momentum",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 0.99,
+      "default": 0.545
+    },
+    {
+      "name": "num_layers",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 5,
+      "default": 3
+    },
+    {
+      "name": "weight_decay",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 1e-05,
+      "upper": 0.1,
+      "default": 0.050005
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.4.18",
+  "json_format_version": 0.2
+}

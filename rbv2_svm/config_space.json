@@ -1,0 +1,99 @@
+{
+  "hyperparameters": [
+    {
+      "name": "cost",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 22026.465794806718,
+      "default": 1.0
+    },
+    {
+      "name": "kernel",
+      "type": "categorical",
+      "choices": [
+        "linear",
+        "polynomial",
+        "radial"
+      ],
+      "default": "linear",
+      "probabilities": null
+    },
+    {
+      "name": "num.impute.selected.cpo",
+      "type": "categorical",
+      "choices": [
+        "impute.mean",
+        "impute.median",
+        "impute.hist"
+      ],
+      "default": "impute.mean",
+      "probabilities": null
+    },
+    {
+      "name": "repl",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 10,
+      "default": 6
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": ["40981","4134","1220","40978","40966","40536","41156","458","41157","40975","40994","1468","6332","40670","151","1475","1476","1478","1479","41212","1480","1053","1067","1056","12","1487","1068","32","470","312","38","40982","50","41216","307","40498","181","1464","41164","16","1461","41162","6","14","1494","54","375","1590","23","41163","1111","41027","40668","41138","4135","4538","40496","4534","40900","1457","11","1462","41142","40701","29","37","23381","188","41143","1063","3","18","40979","22","1515","334","24","1493","28","1050","1049","40984","40685","42","44","46","1040","41146","377","40499","1497","60","40983","4154","469","31","41278","1489","1501","15","300","1485","1486","1510","182","41169"
+      ],
+      "default": "1040",
+      "probabilities": null
+    },
+    {
+      "name": "tolerance",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 2.0,
+      "default": 0.009528896
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    },
+    {
+      "name": "degree",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 2,
+      "upper": 5,
+      "default": 4
+    },
+    {
+      "name": "gamma",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 4.5399929762484854e-05,
+      "upper": 22026.465794806718,
+      "default": 1.0
+    }
+  ],
+  "conditions": [
+    {
+      "child": "degree",
+      "parent": "kernel",
+      "type": "EQ",
+      "value": "polynomial"
+    },
+    {
+      "child": "gamma",
+      "parent": "kernel",
+      "type": "EQ",
+      "value": "radial"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.18",
+  "json_format_version": 0.2
+}

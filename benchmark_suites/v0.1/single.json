@@ -1,0 +1,102 @@
+[
+    {
+        "scenario": "nb301",
+        "instance": "CIFAR10",
+        "target": ["val_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "167168",
+        "target": ["val_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "189873",
+        "target": ["val_accuracy"]
+    },
+    {
+        "scenario": "lcbench",
+        "instance": "189906",
+        "target": ["val_accuracy"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "12",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "1501",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "16",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_xgboost",
+        "instance": "40499",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1053",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1457",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1063",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1479",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "15",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_super",
+        "instance": "1468",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "375",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_glmnet",
+        "instance": "458",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "16",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_ranger",
+        "instance": "42",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "14",
+        "target": ["acc"]
+    },
+    {
+        "scenario": "rbv2_rpart",
+        "instance": "40499",
+        "target": ["acc"]
+    }
+]
