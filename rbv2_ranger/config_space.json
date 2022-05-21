@@ -10,7 +10,7 @@
     },
     {
       "name": "mtry.power",
-      "type": "uniform_int",
+      "type": "uniform_float",
       "log": false,
       "lower": 0,
       "upper": 1,
