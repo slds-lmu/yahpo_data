@@ -1,0 +1,195 @@
+{
+  "hyperparameters": [
+    {
+      "name": "alpha",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0001,
+      "upper": 1000.0,
+      "default": 0.316227766
+    },
+    {
+      "name": "booster",
+      "type": "categorical",
+      "choices": [
+        "gblinear",
+        "gbtree"
+      ],
+      "default": "gblinear",
+      "probabilities": null
+    },
+    {
+      "name": "lambda",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0001,
+      "upper": 1000.0,
+      "default": 0.316227766
+    },
+    {
+      "name": "nrounds",
+      "type": "uniform_int",
+      "log": true,
+      "lower": 1,
+      "upper": 1000,
+      "default": 32
+    },
+    {
+      "name": "pre_post",
+      "type": "categorical",
+      "choices": [
+        "none",
+        "post",
+        "pre"
+      ],
+      "default": "none",
+      "probabilities": null
+    },
+    {
+      "name": "subsample",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "190424",
+        "7592",
+        "31",
+        "14965",
+        "317599"
+      ],
+      "default": "190424",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1111111111111111,
+      "upper": 1.0,
+      "default": 0.5555555556
+    },
+    {
+      "name": "EoD_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    },
+    {
+      "name": "colsample_bylevel",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "colsample_bytree",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 1.0,
+      "default": 0.505
+    },
+    {
+      "name": "eta",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0001,
+      "upper": 1.0,
+      "default": 0.01
+    },
+    {
+      "name": "gamma",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0001,
+      "upper": 7.0,
+      "default": 0.0264575131
+    },
+    {
+      "name": "max_depth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 15,
+      "default": 8
+    },
+    {
+      "name": "min_child_weight",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 2.718281828459045,
+      "upper": 150.0,
+      "default": 20.1926292064
+    },
+    {
+      "name": "reweighing_os_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    }
+  ],
+  "conditions": [
+    {
+      "child": "colsample_bylevel",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "colsample_bytree",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "eta",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "gamma",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "max_depth",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "min_child_weight",
+      "parent": "booster",
+      "type": "EQ",
+      "value": "gbtree"
+    },
+    {
+      "child": "EoD_alpha",
+      "parent": "pre_post",
+      "type": "EQ",
+      "value": "post"
+    },
+    {
+      "child": "reweighing_os_alpha",
+      "parent": "pre_post",
+      "type": "EQ",
+      "value": "pre"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.20",
+  "json_format_version": 0.2
+}

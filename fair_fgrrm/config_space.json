@@ -1,0 +1,55 @@
+{
+  "hyperparameters": [
+    {
+      "name": "definition",
+      "type": "categorical",
+      "choices": [
+        "sp-komiyama",
+        "eo-komiyama"
+      ],
+      "default": "sp-komiyama",
+      "probabilities": null
+    },
+    {
+      "name": "lambda",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0001,
+      "upper": 1000.0,
+      "default": 0.316227766
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "190424",
+        "7592",
+        "31",
+        "14965",
+        "317599"
+      ],
+      "default": "190424",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1111111111111111,
+      "upper": 1.0,
+      "default": 0.5555555556
+    },
+    {
+      "name": "unfairness",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 1.0,
+      "default": 0.5
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.4.20",
+  "json_format_version": 0.2
+}
