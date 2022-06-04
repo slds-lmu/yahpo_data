@@ -39,14 +39,16 @@ domain = ps(
 codomain = ps(
   mmce = p_dbl(lower = 0, upper = 1, tags = "minimize"),
   f1 = p_dbl(lower = 0, upper = 1, tags = "maximize"),
-  auc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
-  logloss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
+  feo = p_dbl(tags = "minimize"),
+  fpredp = p_dbl(tags = "minimize"),
+  facc = p_dbl(tags = "minimize"),
+  ftpr = p_dbl(tags = "minimize"),
+  ffomr = p_dbl(tags = "minimize"),
+  ffnr = p_dbl(tags = "minimize"),
+  #fpp = p_dbl(tags = "minimize"),
   ramtrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rampredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   timetrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  mec = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  ias = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  nf = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize")
 )

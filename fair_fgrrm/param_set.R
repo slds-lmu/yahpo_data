@@ -23,7 +23,7 @@ codomain = ps(
   ftpr = p_dbl(tags = "minimize"),
   ffomr = p_dbl(tags = "minimize"),
   ffnr = p_dbl(tags = "minimize"),
-  fpp = p_dbl(tags = "minimize"),
+  #fpp = p_dbl(tags = "minimize"),
   ramtrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rampredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),

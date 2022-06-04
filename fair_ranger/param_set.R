@@ -12,7 +12,6 @@ search_space = ps(
   num.random.splits = p_int(lower = 1L, upper = 100L, depends = splitrule == "extratrees"),
   trainsize = p_dbl(lower = 1/9, upper = 1, tags = "budget"),
   task_id = p_fct(levels = c("190424", "7592", "31", "14965", "317599"), tags = "task_id")
-  task_id = p_fct(levels = c("40981", "41146", "1489", "1067"), tags = "task_id")
 )
 
 domain = ps(
@@ -40,7 +39,7 @@ codomain = ps(
   ftpr = p_dbl(tags = "minimize"),
   ffomr = p_dbl(tags = "minimize"),
   ffnr = p_dbl(tags = "minimize"),
-  fpp = p_dbl(tags = "minimize"),
+  #fpp = p_dbl(tags = "minimize"),
   ramtrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   rampredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
