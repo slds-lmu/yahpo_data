@@ -33,7 +33,7 @@ codomain = ps(
   ffnr = p_dbl(tags = "minimize"),
   #fpp = p_dbl(tags = "minimize"),
   #ramtrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
+  #rammodel = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   #rampredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   timetrain = p_dbl(lower = 0, upper = Inf, tags = "minimize")
   #timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize")
