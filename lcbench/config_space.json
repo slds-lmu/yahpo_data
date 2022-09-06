@@ -55,7 +55,7 @@
       "type": "uniform_int",
       "log": false,
       "lower": 1,
-      "upper": 52,
+      "upper": 50,
       "default": 26
     },
     {

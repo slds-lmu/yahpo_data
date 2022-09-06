@@ -1,6 +1,10 @@
 The current version can be found in the VERSION file.
 This files documents changes made between versions.
 
+# v1.0.1
+
+Adressed inconsistency in the epochs argument of `lcbench`. The correct maximum is 50, not 52.
+
 # v1.0
 
 Initial major version 1.0 release for yahpo_data.
