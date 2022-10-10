@@ -95,7 +95,7 @@ domain = ps(
     aknn.distance = p_fct(levels = c("l2", "cosine", "ip")),
     aknn.M = p_int(lower = 18L, upper = 50L),
     aknn.ef = p_int(lower = 7L, upper = 403L),
-    aknn.ef_construction = p_int(lower = 7L, upper = 403L),
+    aknn.ef_construction = p_int(lower = 7L, upper = 1097L),
     # xgboost
     xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
     xgboost.nrounds = p_int(lower = 7L, upper = 2981L),
