@@ -11,7 +11,7 @@ search_space = ps(
   splitrule = p_fct(levels = c("gini", "extratrees")),
   num.random.splits = p_int(lower = 1L, upper = 100L, depends = splitrule == "extratrees"),
   trainsize = p_dbl(lower = 1/9, upper = 1, tags = "budget"),
-  task_id = p_fct(levels = c("190424", "7592", "31", "14965", "317599"), tags = "task_id")
+  task_id = p_fct(levels = c("190424", "31", "14965", "317599"), tags = "task_id")
 )
 
 domain = ps(
@@ -27,7 +27,7 @@ domain = ps(
   splitrule = p_fct(levels = c("gini", "extratrees")),
   num.random.splits = p_int(lower = 1L, upper = 100L, depends = splitrule == "extratrees"),
   trainsize = p_dbl(lower = 1/9, upper = 1, tags = "budget"),
-  task_id = p_fct(levels = c("190424", "7592", "31", "14965", "317599"), tags = "task_id")
+  task_id = p_fct(levels = c("190424", "31", "14965", "317599"), tags = "task_id")
 )
 
 codomain = ps(
