@@ -30,7 +30,7 @@
       "log": false,
       "lower": 0.1111111111111111,
       "upper": 1.0,
-      "default": 0.5555555556
+      "default": 1.0
     },
     {
       "name": "fgrrm.definition",

@@ -28,9 +28,9 @@
       "name": "trainsize",
       "type": "uniform_float",
       "log": false,
-      "lower": 0.03,
+      "lower": 0.11111111111111111111,
       "upper": 1.0,
-      "default": 0.525
+      "default": 1.0
     },
     {
       "name": "glmnet.alpha",

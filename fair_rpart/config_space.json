@@ -48,7 +48,6 @@
       "type": "categorical",
       "choices": [
         "190424",
-        "7592",
         "31",
         "14965",
         "317599"
@@ -62,7 +61,7 @@
       "log": false,
       "lower": 0.1111111111111111,
       "upper": 1.0,
-      "default": 0.5555555556
+      "default": 1.0
     },
     {
       "name": "EoD_alpha",

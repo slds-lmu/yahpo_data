@@ -3,3 +3,6 @@ config.ini
 tables_from_ps.R
 *_noisy.onnx
 models/
+preprocess.R
+mo_analysis.R
+*.png
