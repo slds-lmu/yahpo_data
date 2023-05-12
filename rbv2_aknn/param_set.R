@@ -15,7 +15,7 @@ search_space = ps(
   distance = p_fct(levels = c("l2", "cosine", "ip")),
   M = p_int(lower = 18L, upper = 50L),
   ef = p_dbl(lower = 2.07, upper = 5.54, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
-  ef_construction = p_dbl(lower = 2.07, upper = 6.238, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+  ef_construction = p_dbl(lower = log(8), upper = log(512), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
   trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
   repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
   num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
