@@ -73,17 +73,17 @@
       "name": "aknn.ef",
       "type": "uniform_int",
       "log": true,
-      "lower": 7,
-      "upper": 403,
-      "default": 53
+      "lower": 8,
+      "upper": 256,
+      "default": 48
     },
     {
       "name": "aknn.ef_construction",
       "type": "uniform_int",
       "log": true,
-      "lower": 7,
-      "upper": 1097,
-      "default": 88
+      "lower": 8,
+      "upper": 512,
+      "default": 96
     },
     {
       "name": "aknn.k",
