@@ -25,8 +25,8 @@ search_space = ps(
     aknn.k = p_int(lower = 1L, upper = 50L),
     aknn.distance = p_fct(levels = c("l2", "cosine", "ip")),
     aknn.M = p_int(lower = 18L, upper = 50L),
-    aknn.ef = p_dbl(lower = 2, upper = 6, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
-    aknn.ef_construction = p_dbl(lower = 2, upper = 7, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+    aknn.ef = p_dbl(lower = 2.07, upper = 5.54, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+    aknn.ef_construction = p_dbl(lower = log(8), upper = log(512), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
     # xgboost
     xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
     xgboost.nrounds = p_dbl(lower = 2, upper = 8, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
@@ -94,8 +94,8 @@ domain = ps(
     aknn.k = p_int(lower = 1L, upper = 50L),
     aknn.distance = p_fct(levels = c("l2", "cosine", "ip")),
     aknn.M = p_int(lower = 18L, upper = 50L),
-    aknn.ef = p_int(lower = 7L, upper = 403L),
-    aknn.ef_construction = p_int(lower = 7L, upper = 403L),
+    aknn.ef = p_int(lower = 8L, upper = 256L),
+    aknn.ef_construction = p_int(lower = 8L, upper = 512L),
     # xgboost
     xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
     xgboost.nrounds = p_int(lower = 7L, upper = 2981L),

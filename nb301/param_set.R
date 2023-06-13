@@ -1,5 +1,5 @@
 ps = ParamSet$new(list(
-  ParamFct$new("dataset", levels = c("CIFAR10"), tags = "task_id"),
+  #ParamFct$new("dataset", levels = c("CIFAR10"), tags = "task_id"),
   ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_0",
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
