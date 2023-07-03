@@ -55,8 +55,8 @@
       "type": "uniform_int",
       "log": false,
       "lower": 1,
-      "upper": 52,
-      "default": 26
+      "upper": 50,
+      "default": 25
     },
     {
       "name": "learning_rate",
