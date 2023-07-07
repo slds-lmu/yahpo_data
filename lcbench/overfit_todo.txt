@@ -1,0 +1,30 @@
+check whether a local search results in worse overfit
+
+check for which datasets overfit occurs
+look at resampling:
+  * balancy
+  * can we quantify similarity of datasets
+  * meta info
+
+fcnet tabular
+nb101
+
+library(proxy)
+library(mlr3)
+library(mlr3oml)
+library(data.table)
+
+task = tsk("oml", task_id = 167181)
+resampling = rsmp("oml", task_id = 167181)
+task_train = task$clone(deep = TRUE)$filter(resampling$train_set(1))
+task_test = task$clone(deep = TRUE)$filter(resampling$test_set(1))
+
+X1 = task_train$data()
+X1[, defects := as.numeric(defects)]
+X2 = task_test$data()
+X2[, defects := as.numeric(defects)]
+
+similarities = simil(X1, X2, method = "cosine")
+similarities_max = apply(similarities, MARGIN = 2L, FUN = max)
+min(similarities_max)
+
