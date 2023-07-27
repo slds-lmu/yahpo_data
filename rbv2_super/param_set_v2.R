@@ -146,5 +146,5 @@ codomain = ps(
   logloss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   timetrain = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   timepredict = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  memory = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  #memory = p_dbl(lower = 0, upper = Inf, tags = "minimize")
 )
