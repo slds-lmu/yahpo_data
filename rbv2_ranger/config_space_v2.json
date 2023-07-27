@@ -1,0 +1,112 @@
+{
+  "hyperparameters": [
+    {
+      "name": "min.node.size",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 50
+    },
+    {
+      "name": "mtry.power",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0,
+      "upper": 1,
+      "default": 0
+    },
+    {
+      "name": "num.impute.selected.cpo",
+      "type": "categorical",
+      "choices": [
+        "impute.mean",
+        "impute.median",
+        "impute.hist"
+      ],
+      "default": "impute.mean",
+      "probabilities": null
+    },
+    {
+      "name": "num.trees",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 2000,
+      "default": 1000
+    },
+    {
+      "name": "repl",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 10,
+      "default": 6
+    },
+    {
+      "name": "respect.unordered.factors",
+      "type": "categorical",
+      "choices": [
+        "ignore",
+        "order",
+        "partition"
+      ],
+      "default": "ignore",
+      "probabilities": null
+    },
+    {
+      "name": "sample.fraction",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 1.0,
+      "default": 0.55
+    },
+    {
+      "name": "splitrule",
+      "type": "categorical",
+      "choices": [
+        "gini",
+        "extratrees"
+      ],
+      "default": "gini",
+      "probabilities": null
+    },
+    {
+      "name": "task_id",
+      "type": "categorical",
+      "choices": [
+        "4135","40981","4134","1220","4154","4538","40978","375","40496","40966","4534","40900","40536","41156","1590","1457","458","469","41157","11","1461","1462","1464","15","40975","41142","40701","40994","23","1468","40668","29","31","6332","37","40670","23381","151","188","41164","1475","1476","1478","1479","41212","1480","41143","1053","41027","1067","1063","3","6","1485","1056","12","14","16","18","40979","22","1515","334","24","1486","41278","28","1487","1068","1050","1049","32","1489","470","1494","182","312","40984","1501","40685","38","42","44","46","40982","1040","41146","377","40499","50","54","41216","307","1497","60","1510","40983","40498","181","41138","41163","1111","41159","300","41162","23517","41165","4541","41161","41166","40927","41150","23512","41168","1493","40996","554","40923","41169"
+      ],
+      "default": "1040",
+      "probabilities": null
+    },
+    {
+      "name": "trainsize",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.03,
+      "upper": 1.0,
+      "default": 0.525
+    },
+    {
+      "name": "num.random.splits",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 100,
+      "default": 1
+    }
+  ],
+  "conditions": [
+    {
+      "child": "num.random.splits",
+      "parent": "splitrule",
+      "type": "EQ",
+      "value": "extratrees"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.4.18",
+  "json_format_version": 0.2
+}

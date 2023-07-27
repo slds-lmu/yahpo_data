@@ -6,3 +6,5 @@ models/
 preprocess.R
 mo_analysis.R
 *.png
+fcnet/
+global_statistics/

@@ -140,7 +140,7 @@ map(domain$params$learner_id$levels, function(x) {
 codomain = ps(
   acc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   bac = p_dbl(lower = 0, upper = 1, tags = "maximize"),
-  f1 = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  #f1 = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   auc = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   brier = p_dbl(lower = 0, upper = 1, tags = "minimize"),
   logloss = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
