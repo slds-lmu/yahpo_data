@@ -70,6 +70,16 @@
       "default": 4
     },
     {
+      "name": "shrinking",
+      "type": "categorical",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "default": "TRUE",
+      "probabilities": null
+    },
+    {
       "name": "gamma",
       "type": "uniform_float",
       "log": true,

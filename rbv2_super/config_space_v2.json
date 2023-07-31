@@ -133,6 +133,16 @@
       "default": 1000
     },
     {
+      "name": "ranger.replace",
+      "type": "categorical",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "default": "TRUE",
+      "probabilities": null
+    },
+    {
       "name": "ranger.respect.unordered.factors",
       "type": "categorical",
       "choices": [
@@ -280,6 +290,16 @@
       "default": 4
     },
     {
+      "name": "svm.shrinking",
+      "type": "categorical",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "default": "TRUE",
+      "probabilities": null
+    },
+    {
       "name": "svm.gamma",
       "type": "uniform_float",
       "log": true,
@@ -414,6 +434,12 @@
       "value": "ranger"
     },
     {
+      "child": "ranger.replace",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "ranger"
+    },
+    {
       "child": "ranger.respect.unordered.factors",
       "parent": "learner_id",
       "type": "EQ",
@@ -538,6 +564,12 @@
           "value": "svm"
         }
       ]
+    },
+    {
+      "child": "svm.shrinking",
+      "parent": "learner_id",
+      "type": "EQ",
+      "value": "svm"
     },
     {
       "child": "svm.gamma",

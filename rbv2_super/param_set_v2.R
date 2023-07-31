@@ -5,6 +5,7 @@ search_space = ps(
     svm.gamma = p_dbl(lower = -10, upper = 10, tags = "log", trafo = function(x) exp(x), depends = svm.kernel == "radial"),
     svm.tolerance = p_dbl(lower = -10, upper = log(2), tags = "log", trafo = function(x) exp(x)),
     svm.degree = p_int(lower = 2L, upper = 5L, depends = svm.kernel == "polynomial"),
+    svm.shrinking = p_lgl(),
     # glmnet
     glmnet.alpha = p_dbl(lower = 0, upper = 1),
     glmnet.s = p_dbl(lower = -7, upper = 7, tags = "log", trafo = function(x) exp(x)),
@@ -15,6 +16,7 @@ search_space = ps(
     rpart.minsplit = p_int(lower = 1L, upper = 100L),
     # ranger
     ranger.num.trees = p_int(lower = 1L, upper = 2000L),
+    ranger.replace = p_lgl(),
     ranger.sample.fraction = p_dbl(lower = 0.1, upper = 1),
     ranger.mtry.power = p_dbl(lower = 0, upper = 1),
     ranger.respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
@@ -74,6 +76,7 @@ domain = ps(
     svm.gamma = p_dbl(lower = exp(-10), upper = exp(10), depends = svm.kernel == "radial"),
     svm.tolerance = p_dbl(lower = exp(-10), upper = 2),
     svm.degree = p_int(lower = 2L, upper = 5L, depends = svm.kernel == "polynomial"),
+    svm.shrinking = p_lgl(),
     # glmnet
     glmnet.alpha = p_dbl(lower = 0, upper = 1),
     glmnet.s = p_dbl(lower = exp(-7), upper = exp(7)),
@@ -84,6 +87,7 @@ domain = ps(
     rpart.minsplit = p_int(lower = 1L, upper = 100L),
     # ranger
     ranger.num.trees = p_int(lower = 1L, upper = 2000L),
+    ranger.replace = p_lgl(),
     ranger.sample.fraction = p_dbl(lower = 0.1, upper = 1),
     ranger.mtry.power = p_dbl(lower = 0, upper = 1),
     ranger.respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),

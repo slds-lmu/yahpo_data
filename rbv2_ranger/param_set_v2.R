@@ -13,6 +13,7 @@ codomain = ps(
 
 search_space = ps(
   num.trees = p_int(lower = 1L, upper = 2000L),
+  replace = p_lgl(),
   sample.fraction = p_dbl(lower = 0.1, upper = 1),
   mtry.power = p_dbl(lower = 0, upper = 1),
   respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
@@ -42,6 +43,7 @@ search_space = ps(
 
 domain = ps(
   num.trees = p_int(lower = 1L, upper = 2000L),
+  replace = p_lgl(),
   sample.fraction = p_dbl(lower = 0.1, upper = 1),
   mtry.power = p_dbl(lower = 0, upper = 1),
   respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
