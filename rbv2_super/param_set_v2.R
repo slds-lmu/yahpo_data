@@ -42,7 +42,7 @@ search_space = ps(
     xgboost.rate_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
-    repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
+    repl = p_fct(levels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"), tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
     learner_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
     task_id = p_fct(levels = c("41138", "40981", "4134", "1220", "4154", "41163", "4538",
@@ -112,7 +112,7 @@ domain = ps(
     xgboost.skip_drop = p_dbl(lower = 0, upper = 1, depends = xgboost.booster == "dart"),
     # learner_id
     trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
-    repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
+    repl = p_fct(levels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"), tags = "budget"),
     num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
     learner_id = p_fct(levels = c("aknn", "glmnet", "ranger", "rpart", "svm", "xgboost")),
     task_id = p_fct(levels = c("41138", "40981", "4134", "1220", "4154", "41163", "4538",

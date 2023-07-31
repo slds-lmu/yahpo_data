@@ -13,7 +13,6 @@ codomain = ps(
 
 search_space = ps(
   num.trees = p_int(lower = 1L, upper = 2000L),
-  # replace = p_lgl(),
   sample.fraction = p_dbl(lower = 0.1, upper = 1),
   mtry.power = p_dbl(lower = 0, upper = 1),
   respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
@@ -21,7 +20,7 @@ search_space = ps(
   splitrule = p_fct(levels = c("gini", "extratrees")),
   num.random.splits = p_int(lower = 1L, upper = 100L, depends = splitrule == "extratrees"),
   trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
-  repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
+  repl = p_fct(levels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"), tags = "budget"),
   num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
   task_id = p_fct(levels = c("4135", "40981", "4134", "1220", "4154", "4538", "40978", "375",
 "40496", "40966", "4534", "40900", "40536", "41156", "1590",
@@ -43,7 +42,6 @@ search_space = ps(
 
 domain = ps(
   num.trees = p_int(lower = 1L, upper = 2000L),
-  # replace = p_lgl(),
   sample.fraction = p_dbl(lower = 0.1, upper = 1),
   mtry.power = p_dbl(lower = 0, upper = 1),
   respect.unordered.factors = p_fct(levels = c("ignore", "order", "partition")),
@@ -51,7 +49,7 @@ domain = ps(
   splitrule = p_fct(levels = c("gini", "extratrees")),
   num.random.splits = p_int(lower = 1L, upper = 100L, depends = splitrule == "extratrees"),
   trainsize = p_dbl(lower = 0.03, upper = 1, tags = "budget"),
-  repl = p_int(lower = 1L, upper = 10L, tags = "budget"),
+  repl = p_fct(levels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"), tags = "budget"),
   num.impute.selected.cpo = p_fct(levels = c("impute.mean", "impute.median", "impute.hist")),
   task_id = p_fct(levels = c("4135", "40981", "4134", "1220", "4154", "4538", "40978", "375",
 "40496", "40966", "4534", "40900", "40536", "41156", "1590",

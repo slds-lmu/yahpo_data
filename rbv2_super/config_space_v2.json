@@ -27,11 +27,10 @@
     },
     {
       "name": "repl",
-      "type": "uniform_int",
-      "log": false,
-      "lower": 1,
-      "upper": 10,
-      "default": 6
+      "type": "categorical",
+      "choices": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "default": "10",
+      "probabilities": null
     },
     {
       "name": "task_id",
