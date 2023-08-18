@@ -39,10 +39,13 @@ domain = ParamSet$new(list(
 )
 
 codomain = ps(
-  val_accuracy = p_dbl(lower = 0, upper = 100, tags = "maximize"),
+  val_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   val_cross_entropy = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   val_balanced_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  test_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   test_cross_entropy = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
   test_balanced_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   time = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  time_increase = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  model_parameters = p_int(lower = 1, upper = Inf, tags = "minimize")
 )
