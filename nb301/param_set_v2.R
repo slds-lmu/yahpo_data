@@ -141,6 +141,8 @@ search_space = ps$clone(deep = TRUE)
 domain = ps$clone(deep = TRUE)
 
 codomain = ps(
-  val_accuracy = p_dbl(lower = 0, upper = 100, tags = "maximize"),
-  runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  val_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
+  val_cross_entropy = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
+  runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
+  model_parameters = p_int(lower = 1, upper = Inf, tags = "minimize")
 )
