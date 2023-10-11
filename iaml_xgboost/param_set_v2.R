@@ -1,6 +1,6 @@
 search_space = ps(
   booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
-  nrounds = p_dbl(lower = 1, upper = log(2000), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+  nrounds = p_dbl(lower = log(3), upper = log(2000), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
   eta = p_dbl(lower = log(1e-4), upper = log(1), tags = "log", trafo = function(x) exp(x), depends = booster %in% c("dart", "gbtree")),
   gamma = p_dbl(lower = log(1e-4), upper = log(7), tags = "log", trafo = function(x) exp(x), depends = booster %in% c("dart", "gbtree")),
   lambda = p_dbl(lower = log(1e-4), upper = log(1000), tags = "log", trafo = function(x) exp(x)),

@@ -1,6 +1,12 @@
 The current version can be found in the VERSION file.
 This files documents changes made between versions.
 
+# v2.0
+
+* Fixed lower bound of nrounds in iaml_xgboost and iaml_super search_spaces to correctly be log(3), only affects R version.
+* Fixed bounds of ef in rbv2_aknn and rbv2_super search_spaces to correctly be log(8) and log(256), only affects R version.
+* Fixed bounds of nrounds in rbv2_xgboost and rbv2_super search_spaces to correctly be log(7) and log(2981), only affects R version.
+
 # v1.0.1
 
 * Addressed inconsistency in ef and ef_construction args for `aknn` learner in `rbv2` scenarios.

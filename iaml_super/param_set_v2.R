@@ -13,7 +13,7 @@ search_space = ps(
   glmnet.s = p_dbl(lower = log(1e-4), upper = log(1000), tags = "log", trafo = function(x) exp(x), depends = learner == "glmnet"),
 
   xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart"), depends = learner == "xgboost"),
-  xgboost.nrounds = p_dbl(lower = 1, upper = log(2000), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x))), depends = learner == "xgboost"),
+  xgboost.nrounds = p_dbl(lower = log(3), upper = log(2000), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x))), depends = learner == "xgboost"),
   xgboost.eta = p_dbl(lower = log(1e-4), upper = 0, tags = "log", trafo = function(x) exp(x), depends = xgboost.booster %in% c("dart", "gbtree") && learner == "xgboost"),
   xgboost.gamma = p_dbl(lower = log(1e-4), upper = log(7), tags = "log", trafo = function(x) exp(x), depends = xgboost.booster %in% c("dart", "gbtree") && learner == "xgboost"),
   xgboost.lambda = p_dbl(lower = log(1e-4), upper = log(1000), tags = "log", trafo = function(x) exp(x), depends = learner == "xgboost"),

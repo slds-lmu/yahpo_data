@@ -27,11 +27,11 @@ search_space = ps(
     aknn.k = p_int(lower = 1L, upper = 50L),
     aknn.distance = p_fct(levels = c("l2", "cosine", "ip")),
     aknn.M = p_int(lower = 18L, upper = 50L),
-    aknn.ef = p_dbl(lower = 2.07, upper = 5.54, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+    aknn.ef = p_dbl(lower = log(8), upper = log(256), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
     aknn.ef_construction = p_dbl(lower = log(8), upper = log(512), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
     # xgboost
     xgboost.booster = p_fct(levels = c("gblinear", "gbtree", "dart")),
-    xgboost.nrounds = p_dbl(lower = 2, upper = 8, tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+    xgboost.nrounds = p_dbl(lower = log(7), upper = log(2981), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
     xgboost.eta = p_dbl(lower = -7, upper = 0, tags = "log", trafo = function(x) exp(x), depends = xgboost.booster %in% c("dart", "gbtree")),
     xgboost.gamma = p_dbl(lower = -10, upper = 2, tags = "log", trafo = function(x) exp(x), depends = xgboost.booster %in% c("dart", "gbtree")),
     xgboost.lambda = p_dbl(lower = -7, upper = 7, tags = "log", trafo = function(x) exp(x)),
