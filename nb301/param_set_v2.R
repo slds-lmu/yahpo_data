@@ -42,7 +42,6 @@ ps = ParamSet$new(list(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
 
-
   ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_0",
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
@@ -96,17 +95,17 @@ ps = ParamSet$new(list(
     levels = c("0_1", "0_2", "0_3", "0_4", "1_2", "1_3", "1_4", "2_3", "2_4", "3_4"),
     default = "0_1"),
 
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_3",
-    levels = c("0_1", "0_2", "1_2"),
-    default = "0_1"),
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_4",
-    levels = c("0_1", "0_2", "0_3", "1_2", "1_3", "2_3"),
-    default = "0_1"),
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5",
-    levels = c("0_1", "0_2", "0_3", "0_4", "1_2", "1_3", "1_4", "2_3", "2_4", "3_4"),
-    default = "0_1"),
+  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_3",
+     levels = c("0_1", "0_2", "1_2"),
+     default = "0_1"),
+  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_4",
+     levels = c("0_1", "0_2", "0_3", "1_2", "1_3", "2_3"),
+     default = "0_1"),
+  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5",
+     levels = c("0_1", "0_2", "0_3", "0_4", "1_2", "1_3", "1_4", "2_3", "2_4", "3_4"),
+     default = "0_1"),
 
- ParamInt$new("epoch", lower = 1L, upper = 98L, default = 1L, tags = "budget"))
+  ParamInt$new("epoch", lower = 1L, upper = 98L, default = 1L, tags = "budget"))
 )
 
 ps$add_dep("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_2", on = "NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_3", cond = CondAnyOf$new(c("0_1", "0_2")))
@@ -142,6 +141,6 @@ domain = ps$clone(deep = TRUE)
 codomain = ps(
   val_accuracy = p_dbl(lower = 0, upper = 1, tags = "maximize"),
   val_cross_entropy = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize"),
-  model_parameters = p_int(lower = 1, upper = Inf, tags = "minimize")
+  runtime = p_dbl(lower = 0, upper = Inf, tags = "minimize")
+  #model_parameters = p_int(lower = 1, upper = Inf, tags = "minimize")
 )

@@ -1,1 +1,0 @@
-{"d": 320, "d_hidden_factor": 2.954872438761147, "fit": "fit_one_cycle", "hidden_dropout": 0.09793839862593627, "lr": 0.003698911028273218, "n_layers": 4, "use_residual_dropout": false, "use_wd": true, "wd": 1.2762468776877292e-06}
