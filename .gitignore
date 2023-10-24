@@ -14,4 +14,4 @@ lcbench/data_2k_lw.json
 lcbench/data_2k_lw.zip
 nb301/nasbench301_full_data.zip
 nb301/nb_301_v13_lc_iclr_final/
-
+md5sum_data.sh
