@@ -1,0 +1,1 @@
+{"use_emb_plr": true, "d": 128, "d_hidden_factor": 2.941641172730754, "n_layers": 2, "hidden_dropout": 0.1999774233131526, "use_residual_dropout": false, "lr": 0.005149708497827889, "use_wd": false, "mom1": 0.9666411028045558, "mom2": 0.9145501258637322}
