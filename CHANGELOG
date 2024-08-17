@@ -4,9 +4,8 @@ This files documents changes made between versions.
 # v1.0.1
 
 * Addressed inconsistency in ef and ef_construction args for `aknn` learner in `rbv2` scenarios.
-  The correct upper and lower bounds are 8;256 and 8;512 respectively.
+  The correct upper and lower bounds are [8, 256] and [8, 512] respectively.
   This leads to slightly adapted search spaces for `rbv2_aknn` and `rbv2_super`.
-
 
 # v1.0
 
