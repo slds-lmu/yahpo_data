@@ -62,9 +62,9 @@ search_space = ps(
     )
 )
 # Add dependencies
-map(search_space$params$learner_id$levels, function(x) {
-    nms = names(search_space$params)[startsWith(names(search_space$params), x)]
-    map(nms, function(nm) search_space$add_dep(nm, "learner_id", CondEqual$new(x)))
+map(search_space$levels$learner_id, function(x) {
+    nms = search_space$ids()[startsWith(search_space$ids(), paste0(x, "."))]
+    map(nms, function(nm) search_space$add_dep(nm, "learner_id", CondEqual(x)))
 })
 
 domain = ps(
@@ -132,9 +132,9 @@ domain = ps(
     )
 )
 # Add dependencies
-map(domain$params$learner_id$levels, function(x) {
-    nms = names(domain$params)[startsWith(names(domain$params), x)]
-    map(nms, function(nm) domain$add_dep(nm, "learner_id", CondEqual$new(x)))
+map(domain$levels$learner_id, function(x) {
+    nms = domain$ids()[startsWith(domain$ids(), paste0(x, "."))]
+    map(nms, function(nm) domain$add_dep(nm, "learner_id", CondEqual(x)))
 })
 
 codomain = ps(

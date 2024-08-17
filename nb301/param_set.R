@@ -1,113 +1,113 @@
 ps = ParamSet$new(list(
   #ParamFct$new("dataset", levels = c("CIFAR10"), tags = "task_id"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_0",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_0 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_1",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_1 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_2",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_2 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_3",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_3 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_4",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_4 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_5",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_5 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_6",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_6 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_7",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_7 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_8",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_8 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_9",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_9 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_10",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_10 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_11",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_11 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_12",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_12 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_13",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-
-
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_0",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_1",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_2",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_3",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_4",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_5",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_6",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_7",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_8",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_9",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_10",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_11",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_12",
-    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
-    default = "max_pool_3x3"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_13",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_13 = p_fct(
     levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
     default = "max_pool_3x3"),
 
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_3",
+
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_0 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_1 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_2 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_3 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_4 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_5 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_6 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_7 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_8 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_9 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_10 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_11 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_12 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_reduce_13 = p_fct(
+    levels = c("max_pool_3x3", "avg_pool_3x3", "skip_connect", "sep_conv_3x3", "sep_conv_5x5", "dil_conv_3x3", "dil_conv_5x5"),
+    default = "max_pool_3x3"),
+
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_3 = p_fct(
     levels = c("0_1", "0_2", "1_2"),
     default = "0_1"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_4",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_4 = p_fct(
     levels = c("0_1", "0_2", "0_3", "1_2", "1_3", "2_3"),
     default = "0_1"),
-  ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_5",
+  NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_5 = p_fct(
     levels = c("0_1", "0_2", "0_3", "0_4", "1_2", "1_3", "1_4", "2_3", "2_4", "3_4"),
     default = "0_1"),
 
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_3",
+ NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_3 = p_fct(
     levels = c("0_1", "0_2", "1_2"),
     default = "0_1"),
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_4",
+ NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_4 = p_fct(
     levels = c("0_1", "0_2", "0_3", "1_2", "1_3", "2_3"),
     default = "0_1"),
- ParamFct$new("NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5",
+ NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_reduce_5 = p_fct(
     levels = c("0_1", "0_2", "0_3", "0_4", "1_2", "1_3", "1_4", "2_3", "2_4", "3_4"),
     default = "0_1"),
 
- ParamInt$new("epoch", lower = 1L, upper = 98L, default = 1L, tags = "budget"))
+ epoch = p_int(lower = 1L, upper = 98L, default = 1L, tags = "budget"))
 )
 
 ps$add_dep("NetworkSelectorDatasetInfo_COLON_darts_COLON_edge_normal_2", on = "NetworkSelectorDatasetInfo_COLON_darts_COLON_inputs_node_normal_3", cond = CondAnyOf$new(c("0_1", "0_2")))
