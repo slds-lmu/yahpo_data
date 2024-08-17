@@ -6,19 +6,14 @@ search_space = ps(
     "168908", "168910", "189354", "189862", "189865", "189866", "189873", "189905",
     "189906", "189908", "189909"), tags = "task_id"),
   epoch = p_int(lower = 1L, upper = 52L, tags = "budget"),
-  batch_size = p_dbl(lower = log(16L), upper = log(512L), tags = c("int", "log")),
-  learning_rate = p_dbl(lower = log(1e-4), upper = log(1e-1), tags = "log"),
+  batch_size = p_dbl(lower = log(16L), upper = log(512L), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+  learning_rate = p_dbl(lower = log(1e-4), upper = log(1e-1), tags = "log", trafo = function(x) exp(x)),
   momentum = p_dbl(lower = 0.1, upper = 0.99),
   weight_decay = p_dbl(lower = 1e-5, upper = 1e-1),
   num_layers = p_int(lower = 1L, upper = 5L),
-  max_units = p_dbl(lower = log(64L), upper = log(1024L), tags = c("int", "log")),
-  max_dropout = p_dbl(lower = 0, upper = 1),
-  .extra_trafo = function(x, param_set) {
-    x$batch_size = as.integer(round(exp(x$batch_size)))
-    x$learning_rate = exp(x$learning_rate)
-    x$max_units = as.integer(round(exp(x$max_units)))
-    x
-})
+  max_units = p_dbl(lower = log(64L), upper = log(1024L), tags = c("int", "log"), trafo = function(x) as.integer(round(exp(x)))),
+  max_dropout = p_dbl(lower = 0, upper = 1)
+)
 
 domain = ps(
   OpenML_task_id = p_fct(levels = c(
