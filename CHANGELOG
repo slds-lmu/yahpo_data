@@ -1,16 +1,17 @@
 The current version can be found in the VERSION file.
 This files documents changes made between versions.
 
-# v1.0.1
-
+# Version 1.0.2
 * Addressed inconsistency in ef and ef_construction args for `aknn` learner in `rbv2` scenarios.
   The correct upper and lower bounds are [8, 256] and [8, 512] respectively.
   This leads to slightly adapted search spaces for `rbv2_aknn` and `rbv2_super`.
+* Includes fixes required for yahpogym R 1.0.2 to work with paradox and bbotk 1.0.0.
 
-# v1.0
+# Version 1.0.1
+* Minor utility improvements such as global minimum and maximum statistics.
 
-Initial major version 1.0 release for yahpo_data.
+# Version 1.0
+* Initial major version 1.0 release for yahpo_data.
 
-# v0.0
-
-Initial (experimental) versions of surrogates, search spaces and meta-data.
+# Version 0.0
+* Initial (experimental) versions of surrogates, search spaces and meta-data.

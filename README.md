@@ -8,4 +8,4 @@ Metadata required for the `yahpo_gym` module [![GitHub](https://img.shields.io/b
 
 We provide versioned releases of the metadata to be used in benchmarks here: [GitHub Releases](https://github.com/slds-lmu/yahpo_data/releases).
 
-If you want to use `yahpo_gym` to benchmark optimizers, we currently recommend using the `v1.0.1` version (along with YAHPO Gym 1.0.1 in python or yahpogym 1.0.1 in R). You can find a list of evaluated baselines in our paper!
+If you want to use `yahpo_gym` to benchmark optimizers, we currently recommend using the `v1.0.2` version (along with YAHPO Gym 1.0.2 in python or yahpogym 1.0.2 in R). You can find a list of evaluated baselines in our paper!
